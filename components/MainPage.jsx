@@ -60,6 +60,7 @@ const MainPage = () => {
       const data = await response.json();
 
       if (response.ok) {
+        localStorage.setItem('username', username);
         alert(`User "${username}" created successfully!`);
         setReader({ username, readingList: [] });
       } else {
